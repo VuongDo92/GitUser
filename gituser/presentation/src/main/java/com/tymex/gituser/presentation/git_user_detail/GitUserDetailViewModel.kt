@@ -45,8 +45,8 @@ class GitUserDetailViewModel(
                     state = state.copy(
                         gitUser = (gitUser as Result.Success).data,
                         isLoading = false,
-                        followerNumber = gitUser.data.following ?: 0L,
-                        followingNumber = gitUser.data.followers ?: 0L
+                        followerNumber = gitUser.data.followers ?: 0L,
+                        followingNumber = gitUser.data.following ?: 0L
                     )
                 }
             }

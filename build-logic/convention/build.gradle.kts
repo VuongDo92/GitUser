@@ -47,5 +47,13 @@ gradlePlugin {
             id = "tymex.jvm.ktor"
             implementationClass = "JvmKtorConventionPlugin"
         }
+        register("jvmJUnit5") {
+            id = "tymex.jvm.junit5"
+            implementationClass = "JvmJUnit5ConventionPlugin"
+        }
+        register("androidJUnit5") {
+            id = "tymex.android.junit5"
+            implementationClass = "AndroidJUnit5ConventionPlugin"
+        }
     }
 }

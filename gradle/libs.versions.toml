@@ -38,6 +38,15 @@ kotlinx-serialization = "1.6.3"
 secretsPlugin = "2.0.1"
 annotation = "1.7.1"
 swipeRefresh = "0.35.2-beta"
+# Test
+junit5 = "5.10.1"
+junit5-plugin = "1.10.0.0"
+junit5-compose = "1.4.0"
+mockk = "1.13.11"
+assertk = "0.28.1"
+turbine = "1.1.0"
+composeUiTestManifest = "1.6.8"
+coroutines-test = "1.8.1"
 
 # Project versions
 projectApplicationId = "com.tymex.demo"
@@ -98,6 +107,18 @@ material = { group = "com.google.android.material", name = "material", version.r
 org-mongodb-bson = { module = "org.mongodb:bson", version.ref = "bson" }
 annotation = { group = "androidx.annotation", name = "annotation", version.ref = "annotation" }
 
+# Test dependencies
+junit5-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit5" }
+junit5-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit5" }
+junit5-params = { module = "org.junit.jupiter:junit-jupiter-params", version.ref = "junit5" }
+junit5-android-test-compose = { module = "de.mannodermaus.junit5:android-test-compose", version.ref = "junit5-compose" }
+mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
+mockk-android = { group = "io.mockk", name = "mockk-android", version.ref = "mockk" }
+assertk = { module = "com.willowtreeapps.assertk:assertk", version.ref = "assertk" }
+ktor-client-mock = { module = "io.ktor:ktor-client-mock", version.ref = "ktor" }
+turbine = { group = "app.cash.turbine", name = "turbine", version.ref = "turbine" }
+coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines-test" }
+
 # Gradle
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 android-tools-common = { group = "com.android.tools", name = "common", version.ref = "androidTools" }
@@ -114,6 +135,7 @@ ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 room = { id = "androidx.room", version.ref = "room" }
 androidDynamicFeature = { id = "com.android.dynamic-feature", version.ref = "agp" }
+junit5 = { id = "de.mannodermaus.android-junit5", version.ref = "junit5-plugin" }
 
 tymex-android-application = { id = "tymex.android.application", version = "unspecified" }
 tymex-android-application-compose = { id = "tymex.android.application.compose", version = "unspecified" }
@@ -123,6 +145,8 @@ tymex-android-feature-ui = { id = "tymex.android.feature.ui", version = "unspeci
 tymex-android-room = { id = "tymex.android.room", version = "unspecified" }
 tymex-jvm-library = { id = "tymex.jvm.library", version = "unspecified" }
 tymex-jvm-ktor = { id = "tymex.jvm.ktor", version = "unspecified" }
+tymex-jvm-junit5 = { id = "tymex.jvm.junit5", version = "unspecified" }
+tymex-android-junit5 = { id = "tymex.android.junit5", version = "unspecified" }
 
 [bundles]
 compose = [
