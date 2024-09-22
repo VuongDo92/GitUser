@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.tymex.android.library)
     alias(libs.plugins.tymex.android.room)
-    alias(libs.plugins.tymex.android.junit5)
 }
 
 android {
