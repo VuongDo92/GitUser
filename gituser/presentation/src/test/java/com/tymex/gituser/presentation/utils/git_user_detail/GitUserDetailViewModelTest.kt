@@ -1,6 +1,6 @@
 package com.tymex.gituser.presentation.utils.git_user_detail
 
-import com.pome.test.MainCoroutineExtension
+import com.tymex.test.MainCoroutineExtension
 import com.tymex.core.domain.git_user.GitUser
 import com.tymex.core.domain.util.DataError
 import com.tymex.core.domain.util.Result
@@ -11,11 +11,6 @@ import com.tymex.gituser.presentation.git_user_detail.GitUserDetailViewModel
 import io.mockk.coEvery
 import io.mockk.mockk
 import kotlinx.coroutines.CoroutineScope
-import com.tymex.core.domain.util.Result.Success
-import com.tymex.core.domain.util.Result.Error
-import io.mockk.every
-import io.mockk.spyk
-import kotlinx.coroutines.flow.asFlow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.test.TestDispatcher
 import kotlinx.coroutines.test.advanceUntilIdle

@@ -1,6 +1,6 @@
 package com.tymex.gituser.presentation.utils.git_user_list
 
-import com.pome.test.MainCoroutineExtension
+import com.tymex.test.MainCoroutineExtension
 import com.tymex.core.domain.git_user.GitUser
 import com.tymex.core.domain.util.Constants
 import com.tymex.core.domain.util.Result

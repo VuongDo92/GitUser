@@ -5,6 +5,8 @@ This repository contains a demo Android application built for the Tymex company 
 - [Features](#features)
 - [Screenshots](#screenshots)
 - [Tech Stack](#tech-stack)
+- [Tech Stack](#tech-stack)
+- [Architect Model](#architect-model)
 - [Screens](#screen)
 - [Navigation](#navigation)
 - [Installation and Setup](#installation-and-setup)
@@ -29,6 +31,26 @@ This repository contains a demo Android application built for the Tymex company 
 - **Coroutines & Flow**: For handling asynchronous tasks
 - **Ktor**: Networking library to fetch data from the GitHub API
 - **Room**: Local Database management
+
+## Architect Model
+In Git User app, I have implemented a modularized project, including core and gituser modules, using the MVVM (Model-View-ViewModel) design pattern. The key components of the MVVM pattern are:
+
+***Model***
+- This layer consists of the data repository (GitUserRepository) and data models (GitUser). It handles fetching data from the network or database and provides it to the ViewModel.
+- This layer involves modules like core.database, core.data, core.domain, gituser.domain, and gituser.data for handling local data with Room, network operations, and repository logic.
+
+****ViewModel****
+- Acts as a bridge between the View and Model, fetching data from the repository, exposing it to the View, and handling UI-related logic. For instance, the GitUserListViewModel and GitUserDetailViewModel in the app act as the intermediary between the Model and View. They fetch data from the repository, manage the app’s state, and handle logic like refreshing or loading more Git users.
+
+****View****
+- The UI components (composables) observe changes in the ViewModel and update the UI accordingly including core.presentation.ui, core.presentation.designsystem, components in gituser module.
+
+By separating the app into different modules (core and gituser), you have enhanced modularity and reusability, making the project more maintainable and scalable. Each module has a clear responsibility, reducing coupling between the different layers of the app.
+
+****Unit Test****:
+- JUnit 5 has been integrated to enhance unit testing capabilities. A dedicated test utility module that is designed to simplify the testing of coroutines by providing a custom test dispatcher has also been created to centralize and streamline common testing functionalities.
+- The test module setup will allows for more organized and maintainable test code, leveraging JUnit 5's advanced features to improve test flexibility and readability. By utilizing this structure, you can ensure a robust testing process that supports high-quality code development in the GitUser app.
+
 
 ## Screens
 1. **Git User List Screen**:
